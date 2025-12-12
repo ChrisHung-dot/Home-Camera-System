@@ -1,0 +1,13 @@
+version: '3'
+services:
+  webcam_capture:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: webcam_capture_container
+
+  coco_object_detection:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: coco_object_detection_container
